@@ -1,0 +1,264 @@
+@media only screen and (min-width: 600px) {
+    body {
+      background-color: red;
+    }
+    nav  {
+        display: list-item;
+    }
+
+    header {
+        display: list-item;
+    }
+
+    article {
+        display: list-item;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+      background-color: blue;
+    }
+    nav  {
+        display: list-item;
+    }
+
+    header {
+        display: list-item;
+    }
+
+    article {
+        display: list-item;
+    }
+
+    nav {
+        float: left;
+    }
+}
+
+#myGrid {
+    display: grid;
+    grid-template-columns: 100% 200px;
+    grid-template-rows: 100px auto;
+}
+#myGrid > header {
+    display: block;
+}
+#myGrid > article {
+    grid-row-start: 2;
+}
+#myGrid > footer {
+    grid-row-start: 3;
+}
+#articleGrid > nav {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+#articleGrid > #tabelaLotow{
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+#articleGrid > #op{
+    
+    grid-column-start: 3;
+}
+h1{
+    background-color: red;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    width:75%;
+}
+
+#margines {
+
+    margin-left: 15.5%;
+    background-color:  white;
+    position: relative;
+    left: 10px;
+    width: 200px;
+
+}
+
+div {
+    position:relative;
+}
+
+.tabelki>table, .tabelki > form {
+    float: left;
+}
+
+#pop{
+    display:none;
+}
+
+#formul > select, #formul > input {
+    display: block;
+}
+#formul {
+    margin-bottom: 10%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.tabela {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #ffc;
+    text-align: left
+ }
+ .tabela td {
+    border: 1px solid black;
+    padding: 5px;
+ }
+ td.inny_wyglad {
+    background-color: orange;
+    vertical-align: top;
+    font-weight: bold;
+    color: darkred;
+ }
+
+ .nawi {
+     list-style-type: none;
+     margin-left: 20%;
+     font-family: fantasy;
+     text-transform: uppercase;
+ }
+ 
+ #op {
+    font-family: fantasy;
+    text-transform: uppercase;
+ }
+
+ .nawi a:link, .nawi a:visited{
+     color: black;
+ }
+
+ .nawi a:hover {
+    color: black ;
+    background-color: #cfc ;
+  } 
+
+.bardzo {
+    background-color: red;
+}
+
+.srednio {
+    background-color:  orangered;
+}
+
+.malo {
+    background-color: yellow;
+}
+
+#pasazerowie>li:nth-child(even) {
+    background-color: red;
+}
+
+img {
+    display: block;
+    width: 100px; 
+    height: 100px;
+}
+
+ footer {
+
+    background-color: aliceblue;
+  
+    color: green;
+  
+    font-family: sans-serif;
+  
+    font-size: 30px;
+  
+    width: 50%;
+  
+    margin-top:50px;
+  }
+  article {
+     padding-bottom: 15%;
+  }
+
+  #tytuły>h2 {
+      display: inline-block;
+  }
+
+  #trzeciT {
+    display: inline;
+  }
+
+  #drugiT {
+    display: inline;
+  }
+
+  #pierwszyT{
+      display: inline;
+  }
+
+  #lotki {
+      margin-left: 15%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    nav  {
+        display: list-item;
+    }
+
+    header {
+        display: list-item;
+    }
+
+    article {
+        display: list-item;
+    }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Loty</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div id="myGrid">
+        <header>
+            <h1 id="Tytuł">Lista lotów</h1>
+        </header>
+
+        <article>
+            <div id = "poczatek">
+                <img src="logo.jpeg" alt="logo firmy">
+
+                <p>bla bla bla</p>
+                <p>bla bla bla</p>
+            </div>
+            <div id="articleGrid">
+                <div class="tabelki">
+                    <div id=tytuły>
+                        <h2 id="trzeciT">Zarezerwuj</h2>
+                    </div>
+                    <nav>
+                        <h2>Menu</h2>
+                        <ul class="nawi">
+                            <li><a href="file:///home/bartosz/Pulpit/WWW%20loty/main.html">Start</a></li>
+                            <li><a href="file:///home/bartosz/Pulpit/WWW%20loty/lot.html">Lot</a></li>
+                            <li>Punkt pierwszy</li>
+                            <li>Punkt pierwszy</li>
+                            <li>Punkt drugi</li>
+                            <li>Punkt trzeci</li>
+                            <li>Punkt pierwszy</li>
+                            <li>Punkt drugi</li>
+                        </ul>
+                    </nav>
+                    <table id = "tabelaLotow" class="tabela">
+                        <h2>Loty</h2>
+                        <thead>
+                            <tr>
+                                <td>nr</td>
+                                <td>skąd</td>
+                                <td>dokąd</td>
+                                <td>data</td>
+                                <td>godzina</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Komórka 1</td>
+                                <td><a href="file:///home/bartosz/Pulpit/WWW%20loty/lot.html">Najlepszy lot</a></td>
+                                <td>Komórka 3</td>
+                                <td>Komórka 4</td>
+                                <td>Komórka 8</td>
+                            </tr>
+                            <tr>
+                                <td>Komórka 5</td>
+                                <td>Komórka 6</td>
+                                <td>Komórka 7</td>
+                                <td>Komórka 8</td>
+                                <td>Komórka 8</td>
+                            </tr>
+                            <tr>
+                                <td>Komórka 9</td>
+                                <td>Komórka 10</td>
+                                <td>Komórka 11</td>
+                                <td>Komórka 12</td>
+                                <td>Komórka 8</td>
+                            </tr>
+                            <tr>
+                                <td>Komórka 13</td>
+                                <td>Komórka 14</td>
+                                <td>Komórka 15</td>
+                                <td>Komórka 16</td>
+                                <td>Komórka 8</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <table id="op" class="tabela">
+                        <h2>Loty opóźnione</h2>
+                        <tr>
+                            <td>nr</td>
+                            <td>skąd</td>
+                            <td>dokąd</td>
+                            <td>data</td>
+                            <td>godzina</td>
+                            <td>opóźnienie</td>
+                        </tr>
+                        <tr class="bardzo">
+                            <td>1</td>
+                            <td>Warszawa</td>
+                            <td>Paryż</td>
+                            <td>13.03.2020</td>
+                            <td>12:15</td>
+                            <td>130 minut</td>
+                        </tr>
+                        <tr class="srednio">
+                            <td>1</td>
+                            <td>Warszawa</td>
+                            <td>Paryż</td>
+                            <td>13.03.2020</td>
+                            <td>12:15</td>
+                            <td>30 minut</td>
+                        </tr>
+                        <tr class="malo">
+                            <td>1</td>
+                            <td>Warszawa</td>
+                            <td>Paryż</td>
+                            <td>13.03.2020</td>
+                            <td>12:15</td>
+                            <td>15 minut</td>
+                        </tr>
+                    </table>
+                    <form>
+                        <div id="formul">
+                            <label for="skad">Skąd:</label>
+                            <select id="skad">
+                                <option>Paryż</option>
+                                <option>Berlin</option>
+                                <option>Warszawa</option>
+                            </select>
+
+                            <label for="dokad">Dokąd:</label>
+                            <select id="dokad">
+                                <option>Paryż</option>
+                                <option>Berlin</option>
+                                <option>Warszawa</option>
+                            </select>
+
+                            <label for="start">Data:</label>
+
+                            <input type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01"
+                                max="2021-12-31">
+                            <label for="imie">Imię</label>
+                            <input id="imie" type="text">
+                            <label for="imie">Nazwisko</label>
+                            <input id="nazwisko" type="text">
+                            <button>Wyślij</button> <button>Wyczyść</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+        <footer>
+            Autor: <address>Jan Kowalski (jan.kowalski@example.com)</address>
+            <p>wszelkie prawa zastrzeżone</p>
+        </footer>
+    </div>
+</body>
+
+</html>
