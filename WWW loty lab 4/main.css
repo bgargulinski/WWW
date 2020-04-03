@@ -41,13 +41,15 @@
 
     article {
         display: list-item;
+        padding-bottom: 15px;
     }
 
     nav {
         float: left;
     }
     #articleGrid {
-        grid-template-columns: 200px 40% 40%;
+        grid-template-columns: 200px 54% 22%;
+        grid-template-rows: 100%;
         column-gap: 15px;
     }
     #articleGrid > nav {
@@ -62,6 +64,10 @@
         display: block;
         grid-row-start: 1;
         grid-column-start: 3;
+    }
+    #formDiv {
+        margin-top: 100%;
+        margin-left: 50%;
     }
 }
 
@@ -99,6 +105,34 @@
     }
     #informacje {
         display: none;
+    }
+    #poczatek > img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #poczatek > p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer > p, footer {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #formu {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    select, input {
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -279,9 +313,6 @@ img {
     width: 100%;
   
     margin-top:50px;
-  }
-  article {
-     padding-bottom: 15%;
   }
 
   #tytuły>h2 {
