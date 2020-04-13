@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <header>
+        <h1>lot taki i taki</h1>
+    </header>
+
+    <nav>
+        <ul class="nawi">
+            <li><a href="./main.html">Start</a></li>
+            <li><a href="./lot.html">Lot</a></li>
+            <li>Punkt pierwszy</li>
+            <li>Punkt pierwszy</li>
+            <li>Punkt drugi</li>
+            <li>Punkt trzeci</li>
+            <li>Punkt pierwszy</li>
+            <li>Punkt drugi</li>
+        </ul>
+    </nav>
+    <article id="lotki">
+        <p>lot z <a href="https://pl.wikipedia.org/wiki/Warszawa">Warszawy</a> do <a
+                href="https://pl.wikipedia.org/wiki/Pary%C5%BC">Paryża</a></p>
+
+        <div id="informacje">
+            <img src="warszawa.jpeg" alt="logo firmy">
+            <img src="paryz.jpeg" alt="logo firmy">
+            <p>W warszawie 31 stopni, w paryżu 32 stopnie</p>
+        </div>
+        <p>Czas lotu: 2h</p>
+        <p>Samolot duży, 100 miejsc, o taki:</p>
+        <img src="samolot.jpeg" alt="logo firmy">
+        <h2>pasażerowie:</h2>
+        <ul id="pasazerowie">
+            <li id = "pas1" data-identyfikator-pasazera = "0001" class="pokaz">
+                <div class="tooltip">
+                    <a>jeden pasażer</a>
+                    <span class="tooltiptext">Miejsce 3</span>
+                </div>
+            </li>
+            <li id = "pas2" data-identyfikator-pasazera = "0002" class="pokaz">
+                <div class="tooltip">
+                    <a>drugi pasażer</a>
+                    <span class="tooltiptext">Miejsce 2</span>
+                </div>
+            </li>
+            <li id = "pas3" data-identyfikator-pasazera = "0003" class="pokaz">
+                <div class="tooltip">
+                    <a>trzeci pasażer</a>
+                    <span class="tooltiptext">Miejsce 1</span>
+                </div>
+            </li>
+        </ul>
+        <a href="file:///home/bartosz/Pulpit/WWW%20loty/main.html">Wróć</a>
+    </article>
+
+    <footer>
+        Autor: <address>Jan Kowalski (jan.kowalski@example.com)</address>
+        <p>wszelkie prawa zastrzeżone</p>
+    </footer>
+</body>
+
+<script src='lot.js'></script>
+
+</html>
