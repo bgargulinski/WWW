@@ -1,27 +1,27 @@
-var element1 = document.getElementById("wyslij");
-var element2 = document.getElementById("okienkoZaslaniajace");
-var element3 = document.getElementById("bla");
-var element4 = document.getElementById("tekstOkienka");
+var elementWyslij = document.getElementById("wyslij");
+var elementZaslon = document.getElementById("okienkoZaslaniajace");
+var elementParagraf = document.getElementById("bla");
+var elementTextPopup = document.getElementById("tekstOkienka");
 var today = new Date();
 
 function myFunction() {
     if (document.getElementById("imie").value == "" || document.getElementById("nazwisko").value == "" 
     || document.getElementById("start").valueAsDate < today) {
-        element2.style.display = "block";
+        elementZaslon.style.display = "block";
         if (document.getElementById("imie").value == "")
-            element4.innerText = "Proszę wpisać imię!";
+            elementTextPopup.innerText = "Proszę wpisać imię!";
         if (document.getElementById("nazwisko").value == "")
-            element4.innerText = "Proszę wpisać nazwisko!";
+            elementTextPopup.innerText = "Proszę wpisać nazwisko!";
         if (document.getElementById("start").valueAsDate < today)
-            element4.innerText = "Proszę podać poprawną datę!";
+            elementTextPopup.innerText = "Proszę podać poprawną datę!";
     }
 }
 
 function myFunction2() {
-    element2.style.display = "none";
+    elementZaslon.style.display = "none";
 }
 
-element3.textContent = "bla";
+elementParagraf.textContent = "bla";
 
 var nowyElement = document.createElement("div");
 nowyElement.innerHTML = "<p>Oto nowy paragraf</p>";
