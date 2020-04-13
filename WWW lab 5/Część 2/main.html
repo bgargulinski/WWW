@@ -128,7 +128,7 @@
                         </table>
                         <div id="formDiv">
                             <h2>Zarezerwuj:</h2>
-                            <form id="formu">
+                            <form id="formu" onsubmit="return myFunction()">
                                 <div id="formul">
                                     <label for="skad">Skąd:</label>
                                     <select id="skad">
@@ -152,7 +152,7 @@
                                     <input id="imie" type="text">
                                     <label for="imie">Nazwisko</label>
                                     <input id="nazwisko" type="text">
-                                    <button id="wyslij" type = "button" onclick="myFunction()">Wyślij</button> <button>Wyczyść</button>
+                                    <input type="submit" value="Wyślij"> <button>Wyczyść</button>
                                 </div>
                             </form>
                         </div>
