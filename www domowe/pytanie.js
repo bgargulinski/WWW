@@ -36,6 +36,7 @@ function start(quiz) {
 }
 function zaladuj(quiz) {
     document.getElementById("indeks").textContent = String(quiz.obecneZadanie) + "/" + String(quiz.zadania.length);
+    document.getElementById("kara").textContent = String(quiz.zadania[quiz.obecneZadanie - 1].karaZaZla / 1000);
     document.getElementById("tresc").textContent = quiz.zadania[quiz.obecneZadanie - 1].tresc;
     document.getElementById("odp1").textContent = quiz.zadania[quiz.obecneZadanie - 1].odpowiedzA;
     document.getElementById("odp2").textContent = quiz.zadania[quiz.obecneZadanie - 1].odpowiedzB;

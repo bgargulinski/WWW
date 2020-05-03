@@ -69,7 +69,7 @@ button {
     position: relative;
 }
 
-#licznik > h3 {
+#licznik > h3, #licznik2 > h3 {
     display: inline;
 }
 header > h1 {
