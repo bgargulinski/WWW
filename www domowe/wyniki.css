@@ -1,0 +1,86 @@
+body {
+    background-color: blue;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    bottom: 0;
+    width: 99%;
+    margin-top: 10%;
+}
+
+footer > p {
+    width: 100%;
+    text-align: right;
+}
+
+button {
+    display: inline-block;
+    height: 60px;
+    background-color: blueviolet;
+    font-size: large;
+    color: yellow;
+    margin-top: 2%;
+}
+
+#wroc{
+    position:relative;
+}
+
+.tabela {
+    position: relative;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #ffc;
+    text-align: left;
+ }
+ .tabela td, th {
+    border: 1px solid black;
+    padding: 5px;
+    width: 50%;
+ }
+
+@media only screen and (min-width: 300px) {
+    .tabela {
+        width: 90%;
+        left:5%;
+    }
+    nav > button {
+        width: 90%;
+        margin-top: 10%;
+    }  
+}
+
+@media only screen and (min-width: 600px) {
+    .tabela {
+        width: 60%;
+        left:20%;
+    }
+
+    nav > button {
+        width: 50%;
+        margin-top: 10%;
+    }  
+}
+
+@media only screen and (min-width: 1000px) {
+    .tabela {
+        width: 50%;
+        left:25%;
+    }
+    nav > button {
+        width: 20%;
+        margin-top: 5%;
+    }  
+}

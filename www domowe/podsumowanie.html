@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='podsumowanie.css'>
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1 id="Tytuł">Podsumowanie</h1>
+            <div id ="wynik1">
+                <h3>Wynik: </h3>
+                <h3 id="punkty"></h3>
+                <h3> punktów</h3>
+            </div>
+            <div id="wynik">
+                <h3>Czas:</h3>
+                <h3 id="czas"></h3>
+                <h3> sekund</h3>
+            </div>
+        </header>
+
+
+        <article>
+            <h2>Odpowiedzi:</h2>
+            <div id="pytania">
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Numer</th>
+                            <th>Poprawna</th>
+                            <th>Czas/zad</th>
+                            <th>Kara</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cialo">
+
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <nav>
+            <button id="odrzuc" onclick="Odrzuc()">Odrzuć</button>
+            <button id="wyslij" onclick="Zapisz(quiz, wynik)">Zapisz</button>
+        </nav>
+
+        <footer>
+            <p>
+                ©Bartosz Garguliński
+            </p>
+        </footer>
+    </div>
+</body>
+<script src='podsumowanie.js'></script>
+
+</html>

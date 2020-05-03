@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='pytanie.css'>
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1 id="Tytuł">Pytanie Nr</h1>
+            <h1 id="indeks"></h1>
+            <div id="licznik">
+                <h3>Czas:</h3>
+                <h3 id="czas">0</h3>
+            </div>
+            <button onclick="czytajWstep(quizik)">Wstęp</button>
+        </header>
+
+
+        <article>
+            <p id="tresc">Treść pytania</p>
+            <div id="pytania">
+                <button id="odp1" onclick="odpowiedz(quizik,1)">A</button>
+                <button id="odp2" onclick="odpowiedz(quizik,2)">B</button>
+                <button id="odp3" onclick="odpowiedz(quizik,3)">C</button>
+                <button id="odp4" onclick="odpowiedz(quizik,4)">D</button>
+            </div>
+        </article>
+
+        <nav>
+            <div id="przyciski">
+                <button id="poprzednie" onclick="back(quizik)">Poprzednie</button>
+                <button id="stop" onclick="stopQuiz(quizik)">Stop</button>
+                <button id="nastepne" onclick="next(quizik)">Następne</button>
+            </div>
+        </nav>
+
+        <footer>
+            <button id="anuluj" onclick="Anuluj()">Anuluj</button>
+            <p>
+                ©Bartosz Garguliński
+            </p>
+        </footer>
+    </div>
+</body>
+<script src='pytanie.js'></script>
+
+</html>
