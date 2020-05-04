@@ -16,15 +16,34 @@ var Zadanie = /** @class */ (function () {
     return Zadanie;
 }());
 var Quiz = /** @class */ (function () {
-    function Quiz(zadania, wstep) {
+    function Quiz(zadania, wstep, ID) {
         this.zadania = zadania;
         this.obecneZadanie = 1;
         this.obecnyCzas = 0;
         this.czyRozwiazny = false;
         this.liczbaRozwiazanych = 0;
         this.wstep = wstep;
+        this.ID = ID;
     }
     return Quiz;
+}());
+var ZadanieDoStat = /** @class */ (function () {
+    function ZadanieDoStat(numerZad, CzyPrawidlowa, kara, czasNaZadanie) {
+        this.numerZad = numerZad;
+        this.CzyPrawidlowa = CzyPrawidlowa;
+        this.kara = kara;
+        this.czasNaZadanie = czasNaZadanie;
+    }
+    return ZadanieDoStat;
+}());
+var StatyQuizu = /** @class */ (function () {
+    function StatyQuizu(ID, wynik, czas, zadania) {
+        this.ID = ID;
+        this.wynik = wynik;
+        this.czas = czas;
+        this.zadania = zadania;
+    }
+    return StatyQuizu;
 }());
 function wroc() {
     window.location.href = './main.html';

@@ -35,28 +35,58 @@ class Quiz {
     liczbaRozwiazanych: number;
     czyRozwiazny: boolean;
     wstep: string;
+    ID: number;
 
-    constructor(zadania: Zadanie[], wstep: string) {
+    constructor(zadania: Zadanie[], wstep: string, ID: number) {
         this.zadania = zadania;
         this.obecneZadanie = 1;
         this.obecnyCzas = 0;
         this.czyRozwiazny = false;
         this.liczbaRozwiazanych = 0;
         this.wstep = wstep;
+        this.ID = ID;
     }
 }
 
-function Zapisz(quiz: Quiz, punkty: number) {
-    let wyniki: [number, string, Quiz][];
+class ZadanieDoStat {
+    numerZad: number;
+    CzyPrawidlowa: boolean;
+    kara: number;
+    czasNaZadanie: number;
+
+    constructor(numerZad: number, CzyPrawidlowa: boolean, kara: number, czasNaZadanie: number){
+        this.numerZad = numerZad;
+        this.CzyPrawidlowa = CzyPrawidlowa;
+        this.kara = kara;
+        this.czasNaZadanie = czasNaZadanie;
+    }
+}
+
+class StatyQuizu {
+    ID: number;
+    wynik: number;
+    czas: number;
+    zadania: ZadanieDoStat[];
+
+    constructor(ID: number, wynik: number, czas: number, zadania: ZadanieDoStat[]){
+        this.ID = ID;
+        this.wynik = wynik;
+        this.czas = czas;
+        this.zadania = zadania;
+    }
+}
+
+function Zapisz(stat: StatyQuizu, punkty: number) {
+    let wyniki: [number, string, StatyQuizu][];
 
     var osoba = prompt("Podaj swoje imię", "Twoje imię");
 
     if (localStorage.getItem("wyniki") == null) {
-        wyniki = [[punkty, osoba, quiz]];
+        wyniki = [[punkty, osoba, stat]];
     }
     else {
         wyniki = JSON.parse(localStorage.getItem("wyniki"));
-        wyniki.push([punkty, osoba, quiz]);
+        wyniki.push([punkty, osoba, stat]);
     }
 
     wyniki.sort((n1, n2) => n1[0] - n2[0]);
@@ -68,6 +98,16 @@ function Zapisz(quiz: Quiz, punkty: number) {
 
 function Odrzuc(): void {
     window.location.href = './main.html';
+}
+
+function Statystyki(quiz: Quiz, wynik: number): StatyQuizu{
+    let zadanka: ZadanieDoStat[] = [];
+    for(let i = 0; i < quiz.zadania.length; i++){
+        zadanka.push(new ZadanieDoStat(i + 1, quiz.zadania[i].czyPoprawnie, quiz.zadania[i].karaZaZla, quiz.zadania[i].czasPoswiecony));
+    }
+    let Statystyki: StatyQuizu = new StatyQuizu(quiz.ID, wynik, quiz.obecnyCzas, zadanka);
+
+    return Statystyki;
 }
 
 let quiz = JSON.parse(localStorage.getItem("currentQuiz"));
@@ -102,3 +142,5 @@ for (let i = 0; i < quiz.zadania.length; i++) {
 
 document.getElementById("czas").textContent = String(quiz.obecnyCzas / 1000);
 document.getElementById("punkty").textContent = String(wynik);
+
+let staty = Statystyki(quiz, wynik);

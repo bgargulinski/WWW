@@ -36,14 +36,16 @@ class Quiz {
     liczbaRozwiazanych: number;
     czyRozwiazny: boolean;
     wstep: string;
+    ID: number;
 
-    constructor(zadania: Zadanie[], wstep: string) {
+    constructor(zadania: Zadanie[], wstep: string, ID: number) {
         this.zadania = zadania;
         this.obecneZadanie = 1;
         this.obecnyCzas = 0;
         this.czyRozwiazny = false;
         this.liczbaRozwiazanych = 0;
         this.wstep = wstep;
+        this.ID = ID;
     }
 }
 
@@ -143,10 +145,11 @@ let zadanko1 = new Zadanie("2 + 2 =", "4", "5", "2", "1", 1, 2000);
 let zadanko2 = new Zadanie("5 * 8 =", "25", "40", "33", "2", 2, 3000);
 let zadanko3 = new Zadanie("5 ^ 3=", "125", "40", "33", "20", 1, 5000);
 let zadanko4 = new Zadanie("5 - 3=", "0", "40", "33", "2", 4, 2000);
-let quizik = new Quiz([zadanko1, zadanko2, zadanko3, zadanko4], "Witamy w fantastycznym quizie!!!");*/
+let quizik = new Quiz([zadanko1, zadanko2, zadanko3, zadanko4], "Witamy w fantastycznym quizie!!!", 1000);
+*/
 
 //format JSONowy
-let quizik: Quiz = JSON.parse('{"zadania":[{"tresc":"2 + 2 =","odpowiedzA":"4","odpowiedzB":"5","odpowiedzC":"2","odpowiedzD":"1","prawidlowa":1,"karaZaZla":2000,"czyRozwiazane":false,"czasPoswiecony":0},{"tresc":"5 * 8 =","odpowiedzA":"25","odpowiedzB":"40","odpowiedzC":"33","odpowiedzD":"2","prawidlowa":2,"karaZaZla":3000,"czyRozwiazane":false,"czasPoswiecony":0},{"tresc":"5 ^ 3=","odpowiedzA":"125","odpowiedzB":"40","odpowiedzC":"33","odpowiedzD":"20","prawidlowa":1,"karaZaZla":5000,"czyRozwiazane":false,"czasPoswiecony":0},{"tresc":"5 - 3=","odpowiedzA":"0","odpowiedzB":"40","odpowiedzC":"33","odpowiedzD":"2","prawidlowa":4,"karaZaZla":2000,"czyRozwiazane":false,"czasPoswiecony":0}],"obecneZadanie":1,"obecnyCzas":0,"czyRozwiazny":false,"liczbaRozwiazanych":0,"wstep":"Witamy w fantastycznym quizie!!!"}');
+let quizik: Quiz = JSON.parse('{"zadania":[{"tresc":"2 + 2 =","odpowiedzA":"4","odpowiedzB":"5","odpowiedzC":"2","odpowiedzD":"1","prawidlowa":1,"karaZaZla":2000,"czyRozwiazane":false,"czasPoswiecony":0},{"tresc":"5 * 8 =","odpowiedzA":"25","odpowiedzB":"40","odpowiedzC":"33","odpowiedzD":"2","prawidlowa":2,"karaZaZla":3000,"czyRozwiazane":false,"czasPoswiecony":0},{"tresc":"5 ^ 3=","odpowiedzA":"125","odpowiedzB":"40","odpowiedzC":"33","odpowiedzD":"20","prawidlowa":1,"karaZaZla":5000,"czyRozwiazane":false,"czasPoswiecony":0},{"tresc":"5 - 3=","odpowiedzA":"0","odpowiedzB":"40","odpowiedzC":"33","odpowiedzD":"2","prawidlowa":4,"karaZaZla":2000,"czyRozwiazane":false,"czasPoswiecony":0}],"obecneZadanie":1,"obecnyCzas":0,"czyRozwiazny":false,"liczbaRozwiazanych":0,"wstep":"Witamy w fantastycznym quizie!!!","ID":1000}');
 
 localStorage.removeItem("currentQuiz");
 

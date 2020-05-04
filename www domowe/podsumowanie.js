@@ -16,25 +16,44 @@ var Zadanie = /** @class */ (function () {
     return Zadanie;
 }());
 var Quiz = /** @class */ (function () {
-    function Quiz(zadania, wstep) {
+    function Quiz(zadania, wstep, ID) {
         this.zadania = zadania;
         this.obecneZadanie = 1;
         this.obecnyCzas = 0;
         this.czyRozwiazny = false;
         this.liczbaRozwiazanych = 0;
         this.wstep = wstep;
+        this.ID = ID;
     }
     return Quiz;
 }());
-function Zapisz(quiz, punkty) {
+var ZadanieDoStat = /** @class */ (function () {
+    function ZadanieDoStat(numerZad, CzyPrawidlowa, kara, czasNaZadanie) {
+        this.numerZad = numerZad;
+        this.CzyPrawidlowa = CzyPrawidlowa;
+        this.kara = kara;
+        this.czasNaZadanie = czasNaZadanie;
+    }
+    return ZadanieDoStat;
+}());
+var StatyQuizu = /** @class */ (function () {
+    function StatyQuizu(ID, wynik, czas, zadania) {
+        this.ID = ID;
+        this.wynik = wynik;
+        this.czas = czas;
+        this.zadania = zadania;
+    }
+    return StatyQuizu;
+}());
+function Zapisz(stat, punkty) {
     var wyniki;
     var osoba = prompt("Podaj swoje imię", "Twoje imię");
     if (localStorage.getItem("wyniki") == null) {
-        wyniki = [[punkty, osoba, quiz]];
+        wyniki = [[punkty, osoba, stat]];
     }
     else {
         wyniki = JSON.parse(localStorage.getItem("wyniki"));
-        wyniki.push([punkty, osoba, quiz]);
+        wyniki.push([punkty, osoba, stat]);
     }
     wyniki.sort(function (n1, n2) { return n1[0] - n2[0]; });
     localStorage.setItem("wyniki", JSON.stringify(wyniki));
@@ -42,6 +61,14 @@ function Zapisz(quiz, punkty) {
 }
 function Odrzuc() {
     window.location.href = './main.html';
+}
+function Statystyki(quiz, wynik) {
+    var zadanka = [];
+    for (var i = 0; i < quiz.zadania.length; i++) {
+        zadanka.push(new ZadanieDoStat(i + 1, quiz.zadania[i].czyPoprawnie, quiz.zadania[i].karaZaZla, quiz.zadania[i].czasPoswiecony));
+    }
+    var Statystyki = new StatyQuizu(quiz.ID, wynik, quiz.obecnyCzas, zadanka);
+    return Statystyki;
 }
 var quiz = JSON.parse(localStorage.getItem("currentQuiz"));
 var tabelka = document.getElementById("cialo");
@@ -70,3 +97,4 @@ for (var i = 0; i < quiz.zadania.length; i++) {
 }
 document.getElementById("czas").textContent = String(quiz.obecnyCzas / 1000);
 document.getElementById("punkty").textContent = String(wynik);
+var staty = Statystyki(quiz, wynik);
