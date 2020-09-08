@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    form(name="form", method="post")
+        div.input
+            span.label New password:
+            input(type="text", name="password")
+        div.actions
+            input(type="submit", value="zmień hasło")

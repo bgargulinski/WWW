@@ -1,0 +1,20 @@
+html
+    head
+
+    body
+        p= "price: " + meme.price
+        img(src=meme.url)
+
+        form(method='POST' action= meme.id)
+            div.form-group
+                label() price:
+                input#name.form-control(type='text', name='price')
+            button.btn.btn-primary(type='submit') Accept
+
+        table
+            tr
+                th Previous prices
+            - var k = 0
+            while k < meme.pastPrices.length
+                tr
+                     th= meme.pastPrices[k++]

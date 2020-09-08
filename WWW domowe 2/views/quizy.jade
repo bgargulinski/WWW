@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    p Wybierz quiz
+    ul
+        each val in quizy
+            li
+                button(id=val.id) #{val.title}
+     script(src="javascripts/quizy.js")

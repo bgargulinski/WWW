@@ -1,0 +1,128 @@
+body {
+    background-color: blue;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+article {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+nav {
+    width: 99%;
+    height: 100px;
+}
+
+footer {
+    bottom: 0;
+    width: 99%;
+    margin-top: 10%;
+}
+
+footer > p {
+    width: 100%;
+    text-align: right;
+}
+
+button {  
+    height: 60px;
+    background-color: blueviolet;
+    font-size: large;
+    color: yellow;
+    margin-top: 2%;
+}
+
+.tabela {
+    position: relative;
+    left:25%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #ffc;
+    text-align: left;
+    width: 50%;
+ }
+
+ .tabela td, th {
+    border: 1px solid black;
+    padding: 5px;
+ }
+
+ #wynik > h3, #wynik1 > h3 {
+    display: inline;
+ }
+
+ @media only screen and (min-width: 300px) {
+    .tabela {
+        width: 90%;
+        left:5%;
+    }
+    nav > button {
+        width: 90%;
+        margin-top: 10%;
+    }  
+    
+    button{
+        display: block;
+        margin-left: 5%;
+    }
+
+    nav {
+        height: 20%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .tabela {
+        width: 60%;
+        left:20%;
+    }
+
+    nav > button {
+        width: 35%;
+        margin-top: 10%;
+    }
+
+    button{
+        display: inline-block;
+        margin-left: 10%;
+    }
+
+    nav {    
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .tabela {
+        width: 50%;
+        left:25%;
+    }
+    
+    nav > button {
+        width: 20%;
+        margin-top: 5%;
+    }
+
+    button {
+        display: inline-block;
+    }
+
+    #odrzuc {
+        top:50%; 
+        left:20%;
+        margin: -60px -10%; 
+        position:relative;
+    }
+
+    #wyslij {
+        margin: -60px -10%; 
+        position:relative;
+        top:50%; 
+        left:80%;
+    }
+}

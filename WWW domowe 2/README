@@ -1,0 +1,4 @@
+npm install // instaluje pakiety
+npm start // startuje serwer na localhost:3000
+npm run test // startuje testy
+npm run createdb // tworzy bazę danych db, jeśli db już istnieje możliwe są błędy

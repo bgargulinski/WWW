@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Page Title
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', type='text/css', media='screen', href='../stylesheets/pytanie.css')
+    body
+        div
+            header
+                h1(id='Tytuł') Pytanie Nr
+                h1#indeks
+                #licznik
+                    h3 Czas:
+                    h3#czas 0
+                #licznik2
+                    h3 Kara:
+                    h3#kara 0
+            article
+                p#tresc
+                #pytania
+                    button#odp1(onclick='odpowiedz("odpowiedzA")') A
+                    button#odp2(onclick='odpowiedz("odpowiedzB")') B
+                    button#odp3(onclick='odpowiedz("odpowiedzC")') C
+                    button#odp4(onclick='odpowiedz("odpowiedzD")') D
+            nav
+                #przyciski
+                    button#poprzednie(onclick='back()') Poprzednie
+                    button#stop(onclick='stopQuiz()') Stop
+                    button#nastepne(onclick='next()') Następne
+            footer
+                button#anuluj(onclick='Anuluj()') Anuluj
+                p#odpowiedz
+                p
+                    | ©Bartosz Garguliński
+        script(src='javascripts/pytanie.js')

@@ -1,0 +1,44 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Page Title
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', type='text/css', media='screen', href='../stylesheets/wyniki.css')
+    body
+        div
+            header
+                h1(id='Tytuł') Wyniki
+            article
+                table.tabela
+                    thead
+                        tr
+                            th Imię
+                            th Wynik
+                    tbody#cialo
+                table.tabela
+                    thead
+                        tr
+                            th Treść
+                            th Poprawna odpowiedź
+                    tbody#poprawne
+                table.tabela
+                    thead
+                        tr
+                            th Treść
+                            th Moja odpowiedź
+                            th Kara
+                            th Czas
+                            th Poprawność
+                    tbody#moje
+                table.tabela
+                    thead
+                        tr
+                            th Treść
+                            th Średnia
+                    tbody#srednia
+            footer
+                p
+                    | ©Bartosz Garguliński
+        script(src='javascripts/wyniki.js')
