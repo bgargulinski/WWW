@@ -17,9 +17,13 @@ var initDb = function initDb() {
         '(10, 124), (10, 535), (9, 531), (9, 341);');
     db.close();
 };
+var insertUser = function initDb() {
+    var db = new sqlite3.Database('memki.db');
+    db.run('INSERT INTO user (login, password) VALUES ' +
+        '("user_1", "password_1"), ("user_2", "password_2");');
+    db.close();
+};
 function init(callback) {
     makeDb();
 }
-init(function () {
-    initDb();
-});
+insertUser();

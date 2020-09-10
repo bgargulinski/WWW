@@ -4,8 +4,12 @@ html
     style
         include style.css
     body
+        a#login(href='/login') Log In
+        form(action="/logout" method="post")
+            button#logout(type="submit") WYLOGUJ SIĘ
+
         h1= message
-        img(src="https://i.redd.it/scqp0ahbwpl51.jpg")
+        img(src="https://lh5.googleusercontent.com/qqiXdTtwJyctmBZC79rHtucYOGypzKL2TA5wIfRrK5yge-MwliZq36rrClHeAA-lgN58tnGBrC3_dZWlZTBWZufWYU-ePdUVFSNotFW4MDHvrZVnGEw=w1280")
         h1="Meme list"
         ul
             each meme in memes
@@ -13,3 +17,5 @@ html
                     a(href="meme/" + meme.id) #{meme.name}
                     img(src=meme.url)
                     p='Cena:' + meme.price
+
+        p= "Pages viewed: " + viewed

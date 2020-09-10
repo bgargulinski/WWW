@@ -3,13 +3,15 @@ html
     style
         include style.css
     body
-        h2.acch2 Zaloguj się
+        h2.acch2 Log in
         form.accform(action="/login" method="post")
             input(type="hidden" name="_csrf" value=csrftoken)
             label() login
-            input#username(type="text" name="username" maxlength="40" size="25" required)
+            input#login(type="text" name="login" maxlength="40" size="25" required)
             label() password
             input(type="password" name="password" maxlength="40" size="25" required)
             button.accbutton(type="submit") submit
         if warning
             p= "failed login"
+
+        p= "Pages viewed: " + viewed
