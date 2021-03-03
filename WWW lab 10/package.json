@@ -20,7 +20,7 @@
     "md5": "^2.3.0",
     "multer": "^1.4.2",
     "npm-watch": "^0.7.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {
